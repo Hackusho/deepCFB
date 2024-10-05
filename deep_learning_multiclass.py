@@ -1,19 +1,19 @@
 #multiclass deep-learning on college football games
-from pandas import read_csv, DataFrame, concat, io, to_numeric
+from pandas import read_csv, DataFrame, concat, to_numeric
 from os.path import join, exists
 from os import getcwd, mkdir
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from sklearn.decomposition import FactorAnalysis, PCA
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from scipy import stats
-from tensorflow import keras
-from tensorflow.keras import layers
-from keras.callbacks import EarlyStopping
+import keras
+from keras import layers
+from tensorflow.keras.callbacks import EarlyStopping
 from keras_tuner.tuners import RandomSearch
 from tensorflow.keras.optimizers import Adam, RMSprop, SGD
 from keras.layers import Input, Dense, Dropout, BatchNormalization
-from keras.models import Model
+from keras import Model
 from pickle import dump, load
 from colorama import Fore, Style
 from sklearn.linear_model import LinearRegression
@@ -27,8 +27,8 @@ from sklearn.ensemble import RandomForestRegressor
 import subprocess
 import yaml 
 from scipy.stats import norm
-from tensorflow.keras import regularizers
-from tensorflow.keras.optimizers.schedules import ExponentialDecay
+from keras import regularizers
+from keras import ExponentialDecay
 import shutil
 import math
 def build_classifier(hp,input_shape):
